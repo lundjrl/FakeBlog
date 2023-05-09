@@ -13,5 +13,5 @@
   "javascript.preferences.importModuleSpecifier": "project-relative",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["Parens", "tailwindcss", "usehooks"]
+  "cSpell.words": ["dompurify", "flowbite", "Parens", "tailwindcss", "usehooks"]
 }

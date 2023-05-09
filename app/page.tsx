@@ -4,6 +4,8 @@ import { Card } from '~/components/Card'
 import type { POST_DATA_Type } from '~/schema/POST_SCHEMA'
 import { getAllPosts } from '~/services/DataService'
 
+export const revalidate = 60
+
 const Page: () => Promise<JSX.Element> = async () => {
   const posts: POST_DATA_Type[] = await getAllPosts()
 

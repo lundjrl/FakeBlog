@@ -1,14 +1,19 @@
 import type { LinkProps } from 'next/link'
 import Link from 'next/link'
+import { twMerge } from 'tailwind-merge'
 
 interface Props extends LinkProps {
+  className?: string
   text: string
 }
 
-export const CTAButton: React.FC<Props> = ({ href, text }) => (
+export const CTAButton: React.FC<Props> = ({ className = '', href, text }) => (
   <Link
     href={href}
-    className="inline-flex items-center px-3 py-2 mt-2 text-sm font-medium text-center text-white no-underline bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+    className={twMerge(
+      'inline-flex items-center px-3 py-2 mt-2 text-sm font-medium text-center text-white no-underline bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
+      className,
+    )}>
     {text}
     <svg className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
       <path

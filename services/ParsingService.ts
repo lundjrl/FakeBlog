@@ -7,5 +7,7 @@ export const parseStringToSanitizedMarkdown = (content: string): string => {
   const DOMPurify = createDOMPurify(mockWindow)
 
   marked.use({ silent: true })
-  return DOMPurify.sanitize(marked.parse(content))
+  const sanitizedString = DOMPurify.sanitize(marked.parse(content))
+
+  return sanitizedString
 }
